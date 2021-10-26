@@ -3,7 +3,7 @@ function createHome() {
   home.classList.add('home');
 
   const bakeryImage = document.createElement('img');
-  bakeryImage.src = '/home/brirrito/the_odin_project/RestaurantPage/bakery.jpg';
+  bakeryImage.src = '/home/brirrito/the_odin_project/RestaurantPage/images/bakery.jpg';
   bakeryImage.alt = 'bakery';
 
   home.appendChild(createParagraph('Flour, butter, sugar.'));
