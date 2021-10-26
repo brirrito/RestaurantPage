@@ -2,9 +2,9 @@
   --font-color: #cec7be;
   --font-color-dark: #935e36;
   --border-color: #935e36;
-  --background-light: #bfa282;
+  --background-light: #574b44;
   --background-light-hover: #c2ae99;
-  --background-dark: #0b211f;
+  --background-dark: #232e29;
   font-family: 'Amatic SC', cursive;
 }
 
@@ -114,6 +114,27 @@ header {
   margin-bottom: 3rem;
   opacity: 90%;
 }
+
+/* contact page */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact p {
+  font-style: bold;
+  font-size: 25px;
+}
+
+.contact img {
+  max-height: 420px;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+/* menu page */
 
 
 
