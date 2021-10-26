@@ -61,23 +61,23 @@ function setActiveButton(button) {
     }
   });
 
-  button.classList.add("active");
+  button.classList.add('active');
 }
 
 function createMain() {
-  const main = document.createElement("main");
-  main.classList.add("main");
-  main.setAttribute("id", "main");
+  const main = document.createElement('main');
+  main.classList.add('main');
+  main.setAttribute('id', 'main');
   return main;
 }
 
 function initializeWebsite() {
-  const content = document.getElementById("content");
+  const content = document.getElementById('content');
 
   content.appendChild(createHeader());
   content.appendChild(createMain());
 
-  setActiveButton(document.querySelector(".button-nav"));
+  setActiveButton(document.querySelector('.button-nav'));
   loadHome();
 }
 
