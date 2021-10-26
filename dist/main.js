@@ -7,7 +7,18 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createHome() {\n  const home = document.createElement('div');\n  home.classList.add('home');\n\n  const bakeryImage = document.createElement('img');\n  bakeryImage.src = '/home/brirrito/the_odin_project/RestaurantPage/bakery.jpg';\n  bakeryImage.alt = 'bakery';\n\n  home.appendChild(createParagraph('Flour, butter, sugar.'));\n  home.appendChild(bakeryImage);\n\n  return home;\n}\n\nfunction createParagraph(text) {\n  const paragraph = document.createElement('p');\n  paragraph.textContent = text;\n  return paragraph;\n}\n\nfunction loadHome() {\n  const main = document.getElementById('main');\n  main.textContent = '';\n  main.appendChild(createHome());\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome());\n\n//# sourceURL=webpack://restaurantpage/./src/home.js?");
+
+/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -15,8 +26,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _website__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./website */ \"./src/website.js\");\n/* harmony import */ var _website__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_website__WEBPACK_IMPORTED_MODULE_0__);\n\n\n_website__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _website__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./website */ \"./src/website.js\");\n\n\n(0,_website__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ }),
 
@@ -24,9 +34,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _web
 /*!************************!*\
   !*** ./src/website.js ***!
   \************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://restaurantpage/./src/website.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nfunction createHeader() {\n  const header = document.createElement('header');\n  header.classList.add('header');\n\n  const restaurantName = document.createElement('h1');\n  restaurantName.classList.add('restaurantName');\n  restaurantName.textContent = `Brianna's Bakery`;\n\n  header.appendChild(restaurantName);\n  header.appendChild(createNav());\n\n  return header;\n}\n\nfunction createNav() {\n  const nav = document.createElement('nav');\n\n  const homeButton = document.createElement('button');\n  homeButton.classList.add('button-nav');\n  homeButton.textContent = 'Home';\n  homeButton.addEventListener('click', (e) => {\n    if (e.target.classList.contains('active')) return;\n    setActiveButton(homeButton);\n    (0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  });\n\n  const menuButton = document.createElement('button');\n  menuButton.classList.add('button-nav');\n  menuButton.textContent = 'Menu';\n  menuButton.addEvenetListener('click', (e) => {\n    if (e.target.classList.contains('active')) return;\n    setActiveButton(menuButton);\n    loadMenu();\n  });\n\n  const contactButton = document.createElement('button');\n  contactButton.classList.add('button-nav');\n  contactButton.textContent = 'Contact';\n  contactButton.addEventListener('click', (e) => {\n    if (e.target.classList.contains('active')) return;\n    setActiveButton(contactButton);\n    loadContact();\n  });\n\n\n  nav.appendChild(homeButton);\n  nav.appendChild(menuButton);\n  nav.appendChild(contactButton);\n\n  return nav;\n}\n\nfunction setActiveButton(button) {\n  const buttons = document.querySelectorAll('.button-nav');\n\n  buttons.forEach((button) => {\n    if (button !== this) {\n      button.classList.remove('active');\n    }\n  });\n\n  button.classList.add(\"active\");\n}\n\nfunction createMain() {\n  const main = document.createElement('main');\n  main.classList.add('main');\n  main.setAttribute('id', 'main');\n  return main;\n}\n\nfunction initializeWebsite() {\n  const content = document.getElementById(\"content\");\n\n  content.appendChild(createHeader());\n  content.appendChild(createMain());\n\n  setActiveButton(document.querySelector(\".button-nav\"));\n  (0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initializeWebsite);\n\n//# sourceURL=webpack://restaurantpage/./src/website.js?");
 
 /***/ })
 
@@ -57,18 +67,6 @@ eval("\n\n//# sourceURL=webpack://restaurantpage/./src/website.js?");
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports

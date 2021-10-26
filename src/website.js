@@ -65,9 +65,9 @@ function setActiveButton(button) {
 }
 
 function createMain() {
-  const main = document.createElement('main');
-  main.classList.add('main');
-  main.setAttribute('id', 'main');
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
   return main;
 }
 
@@ -76,7 +76,6 @@ function initializeWebsite() {
 
   content.appendChild(createHeader());
   content.appendChild(createMain());
-  content.appendChild(createFooter());
 
   setActiveButton(document.querySelector(".button-nav"));
   loadHome();
