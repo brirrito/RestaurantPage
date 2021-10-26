@@ -24,4 +24,4 @@ function loadHome() {
   main.appendChild(createHome());
 }
 
-export default loadHome();
+export default loadHome;

@@ -29,7 +29,7 @@ function createNav() {
   const menuButton = document.createElement('button');
   menuButton.classList.add('button-nav');
   menuButton.textContent = 'Menu';
-  menuButton.addEvenetListener('click', (e) => {
+  menuButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     setActiveButton(menuButton);
     loadMenu();
